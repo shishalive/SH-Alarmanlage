@@ -26,7 +26,7 @@
     }, {
         "caption": "24h-Alarm (Sabotage / Technik)",
         "name": "24h",
-        "width": "100px",
+        "width": "150px",
         "add": false,
         "edit": {
             "type": "CheckBox"
@@ -34,7 +34,7 @@
     }, {
         "caption": "Technik-Alarm",
         "name": "Technik",
-        "width": "100px",
+        "width": "150px",
         "add": false,
         "edit": {
             "type": "CheckBox"
@@ -42,7 +42,7 @@
     }, {
         "caption": "Bei jeder Aktualisierung auslösen",
         "name": "TriggerOnRefresh",
-        "width": "100px",
+        "width": "150px",
         "add": false,
         "edit": {
             "type": "CheckBox"
@@ -50,7 +50,7 @@
     }, {
         "caption": "Ausgangsverzögerung",
         "name": "verzoegerung_ausgang",
-        "width": "100px",
+        "width": "150px",
         "add": true,
         "edit": {
             "type": "CheckBox"
@@ -58,7 +58,7 @@
     }, {
         "caption": "Eingangsverzögerung",
         "name": "verzoegerung_eingang",
-        "width": "100px",
+        "width": "150px",
         "add": false,
         "edit": {
             "type": "CheckBox"
@@ -66,7 +66,7 @@
     }, {
         "caption": "Intern aktiv",
         "name": "istInternAktiv",
-        "width": "100px",
+        "width": "150px",
         "add": true,
         "edit": {
             "type": "CheckBox"
@@ -74,7 +74,7 @@
     }, {
         "caption": "Aktivierung verhindern",
         "name": "preventActivation",
-        "width": "100px",
+        "width": "150px",
         "add": false,
         "edit": {
             "type": "CheckBox"
