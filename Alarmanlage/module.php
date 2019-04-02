@@ -307,7 +307,7 @@
 			if ($ExitDelay > 0){
 				SetValueBoolean($this->GetIDForIdent("ausgangszeit_aktiv"), true);				
 				SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wird in " . $ExitDelay . " Sekunden aktiviert.");
-				
+				$this->GetOutputSonderziele(4);				
 				$this->SetTimerInterval ("ArmDelay", $ExitDelay * 1000);
 				
 			}else{
