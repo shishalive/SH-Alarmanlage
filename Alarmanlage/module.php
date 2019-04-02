@@ -539,12 +539,9 @@
                 IPS_RequestAction($actionID, $object['ObjectIdent'], $actionValue);
             } else if(IPS_ScriptExists($outputID)) {
                 echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
-				echo "test";
             } else {
 				SetValue($outputID, $actionValue);
-				echo "test3";
 			}
-			SetValue($outputID, $actionValue);
         }
 
         private function GetProfileName($variable){
