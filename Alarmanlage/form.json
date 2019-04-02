@@ -93,7 +93,8 @@
         "width": "auto",
         "add": 0,
         "edit": {
-            "type": "SelectVariable"
+            "type": "SelectVariable",
+			"type": "SelectScript"
         }
     }, {
         "caption": "24h-Alarm",
