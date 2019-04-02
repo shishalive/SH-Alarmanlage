@@ -165,7 +165,7 @@
       {
         "type": "Button",
         "label": "Anlage RESET (nach Alarm oder Störung)",
-        "onClick": "SXALERT_Reset($id);"
+        "onClick": "SHHALARM_Reset($id);"
       }
     ],
     "status":
