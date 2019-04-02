@@ -516,6 +516,10 @@
 		}
 			
 		private function setDeviceStatus(int $outputID, bool $Value){
+			
+			if(IPS_ScriptExists($outputID)) {
+                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
+            } else {
             $object = IPS_GetObject($outputID);
             $variable = IPS_GetVariable($outputID);
             $actionID = $this->GetProfileAction($variable);
@@ -537,13 +541,11 @@
 
             if(IPS_InstanceExists($actionID)){
                 IPS_RequestAction($actionID, $object['ObjectIdent'], $actionValue);
-            } else if(IPS_ScriptExists($outputID)) {
-                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
             } else {
 				SetValue($outputID, $actionValue);
-			}
-        }
-
+				}
+        	}
+		}
         private function GetProfileName($variable){
             if($variable['VariableCustomProfile'] != ""){
                 return $variable['VariableCustomProfile'];
