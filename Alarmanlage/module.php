@@ -518,7 +518,7 @@
 		private function setDeviceStatus(int $outputID, bool $Value){
 			
 			if(IPS_ScriptExists($outputID)) {
-                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
+                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $Value));
             } else {
             $object = IPS_GetObject($outputID);
             $variable = IPS_GetVariable($outputID);
