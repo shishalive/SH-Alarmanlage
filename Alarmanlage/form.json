@@ -92,10 +92,10 @@
         "name": "InstanceID", 
         "width": "auto",
         "add": 0,
-        "edit": {[
-            "type": "SelectVariable",
-			"type": "SelectScript"
-        ]}
+        "edit": [
+            {"type": "SelectVariable"},
+			{"type": "SelectScript"}
+        ]
     }, {
         "caption": "24h-Alarm",
         "name": "24h",
