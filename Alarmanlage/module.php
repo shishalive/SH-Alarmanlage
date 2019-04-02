@@ -522,7 +522,7 @@
 				$al_value = "false";
 			}
 			if(IPS_ScriptExists($outputID)) {
-                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $al_value));
+                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $al_value, "TYP" => $al_typ));
             } else {
             $object = IPS_GetObject($outputID);
             $variable = IPS_GetVariable($outputID);
