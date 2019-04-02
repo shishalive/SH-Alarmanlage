@@ -574,7 +574,7 @@
 			
 			foreach($arr as $key1) {
 				if ($key1["typ"] == 0){
-					$this->setDeviceStatus($key1["InstanceID"], false "unscharf_timer");	
+					$this->setDeviceStatus($key1["InstanceID"], false, "unscharf_timer");	
 				}			
 			}		
 		}
