@@ -515,7 +515,7 @@
 			}
 		}
 			
-		private function setDeviceStatus(int $outputID, bool $Value, bool $al_typ){
+		private function setDeviceStatus(int $outputID, bool $Value, str $al_typ){
 			if ($Value) {
 				$al_value = "true";
 			}else{
