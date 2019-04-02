@@ -52,6 +52,8 @@
 			//Eigenschaften registrieren
 			$this->RegisterPropertyString("devices", null);
 			$this->RegisterPropertyString("melder", null);
+			$this->RegisterPropertyString("sonderziele", null);
+
 			
 			$this->RegisterPropertyInteger("dauer_alarmbeleuchtung", 900);
 			$this->RegisterPropertyInteger("dauer_sirene", 120);
@@ -171,6 +173,7 @@
 					
 					SetValueInteger($this->GetIDForIdent("alarmmodus"), $Modus);
 					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wurde deaktiviert.");
+					$this->GetOutputSonderziele(0);
 					break;
 	
 				case 1:
@@ -202,7 +205,9 @@
 				case 4:
 					//Wartung
 					SetValueInteger($this->GetIDForIdent("alarmmodus"), $Modus);
-					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage ist im Wartungsmodus.");					
+					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage ist im Wartungsmodus.");
+					$this->GetOutputSonderziele(3);
+
 					break;
 					
 				default:
@@ -318,11 +323,14 @@
 			$Mode = GetValueInteger($this->GetIDForIdent("alarmmodus"));
 			switch($Mode){
 				case 1:
-					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wurde gesamt aktiviert.");		
+					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wurde gesamt aktiviert.");	
+					$this->GetOutputSonderziele(1);
+
 					break;
 					
 				case 2:
-					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wurde Intern aktiviert.");		
+					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage wurde Intern aktiviert.");
+					$this->GetOutputSonderziele(2);
 					break;
 			}				
 		}
@@ -436,7 +444,18 @@
 			}	
 			return null;
 		}
-		
+			private function GetOutputSonderziele(int $sonder_id){
+			$arrString = $this->ReadPropertyString("sonderziele");
+			if ($arrString){
+				$arr = json_decode($arrString, true);
+		}
+				if (!$arr){ return; }
+					foreach($arr as $key1) {
+					if ($key1["typ"] == $sonder_id){
+						echo IPS_RunScriptWaitEx($key1["InstanceID"], Array("TYP" => $$sonder_id));
+				}
+			}
+		}
 		
 		private function onTriggerAlert1($DeviceParameters){
 			$this->SetBuffer("AlertDevice", json_encode($DeviceParameters));
