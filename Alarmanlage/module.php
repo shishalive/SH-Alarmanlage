@@ -481,25 +481,25 @@
 			foreach($arr as $key1) {
 				if($key1["delayed"] == $delayed and ($key1["typ"] == 0 or $key1["typ"] == 1 or $key1["typ"] == 4)){
 					if ($is24h == true and $key1 ["24h"] == true){
-						$this->setDeviceStatus($key1["InstanceID"], true, $key1["typ"]);
+						$this->setDeviceStatus($key1["InstanceID"], true, "24h");
 						continue;
 					}
 					
 					if ($isTechnik == true and $key1["Technik"] == true){
-						$this->setDeviceStatus($key1["InstanceID"], true, $key1["typ"]);
+						$this->setDeviceStatus($key1["InstanceID"], true, "technik");
 						continue;
 					}
 					
 					if ($isINTERN == true and $isEinbruch == true){
 						if ($key1["istInternAktiv"] == true){
-							$this->setDeviceStatus($key1["InstanceID"], true, $key1["typ"]);
+							$this->setDeviceStatus($key1["InstanceID"], true, "einbruchint");
 							continue;
 						}
 					}
 					
 					if ($isEXTERN == true and $isEinbruch == true){
 						if ($key1["istExternAktiv"] == true){
-							$this->setDeviceStatus($key1["InstanceID"], true, $key1["typ"]);
+							$this->setDeviceStatus($key1["InstanceID"], true, "einbruch");
 							continue;
 						}
 					}
@@ -511,11 +511,11 @@
 			if (!$arr){ return; }
 			
 			foreach($arr as $key1) {
-				$this->setDeviceStatus($key1["InstanceID"], false, $key1["typ"]);				
+				$this->setDeviceStatus($key1["InstanceID"], false, "unscharf");				
 			}
 		}
 			
-		private function setDeviceStatus(int $outputID, bool $Value, int $al_typ){
+		private function setDeviceStatus(int $outputID, bool $Value, bool $al_typ){
 			if ($Value) {
 				$al_value = "true";
 			}else{
