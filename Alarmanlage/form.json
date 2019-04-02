@@ -152,6 +152,36 @@
 				]
         }
     }]
+},{
+    "type": "List",
+    "name": "sonderziele",
+    "caption": "Sonderziele",
+    "rowCount": 5,
+    "add": true,
+    "delete": true,
+    "columns": [{
+        "caption": "Scripte",
+        "name": "InstanceID", 
+        "width": "auto",
+        "add": 0,
+        "edit": {
+			"type": "SelectScript"
+        }
+    }, {
+        "caption": "Typ",
+        "name": "typ",
+        "width": "150px",
+        "add": 0,
+        "edit": {
+            "type": "Select",
+			"options": [
+				{ "caption": "Deaktiviert", "value": 0 },
+				{ "caption": "Aktiviert", "value": 1 },
+				{ "caption": "Intern Aktiviert", "value": 2 },
+				{ "caption": "WARTUNG", "value": 3 }
+				]
+        }
+    }]
 },
 { "type": "NumberSpinner", "name": "dauer_alarmbeleuchtung", "caption": "Dauer der Alarmbeleuchtung", "suffix": "Sekunden"},
 { "type": "NumberSpinner", "name": "dauer_sirene", "caption": "Dauer der Sirene", "suffix": "Sekunden"},
