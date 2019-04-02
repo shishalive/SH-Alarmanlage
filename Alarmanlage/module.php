@@ -574,7 +574,7 @@
 			
 			foreach($arr as $key1) {
 				if ($key1["typ"] == 0){
-					$this->setDeviceStatus($key1["InstanceID"], false);	
+					$this->setDeviceStatus($key1["InstanceID"], false "unscharf_timer");	
 				}			
 			}		
 		}
@@ -585,7 +585,7 @@
 			
 			foreach($arr as $key1) {
 				if ($key1["typ"] == 1){
-					$this->setDeviceStatus($key1["InstanceID"], false);	
+					$this->setDeviceStatus($key1["InstanceID"], false, "unscharf_timer");	
 				}			
 			}
 		}
@@ -596,7 +596,7 @@
 			
 			foreach($arr as $key1) {
 				if ($key1["typ"] == 4){
-					$this->setDeviceStatus($key1["InstanceID"], false);	
+					$this->setDeviceStatus($key1["InstanceID"], false, "unscharf_timer");		
 				}			
 			}		
 		}
