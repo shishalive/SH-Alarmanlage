@@ -447,7 +447,6 @@
 		}
 			private function GetOutputSonderziele(int $sonder_id){
 			$arrString = $this->ReadPropertyString("Sonderziele");
-			if ($arrString){
 			$arr = json_decode($arrString, true);
 			if (!$arr){ return;}
 					foreach($arr as $key1) {
@@ -456,7 +455,6 @@
 						}
 					}
 				}
-			}
 		
 		private function onTriggerAlert1($DeviceParameters){
 			$this->SetBuffer("AlertDevice", json_encode($DeviceParameters));
