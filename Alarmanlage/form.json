@@ -178,7 +178,9 @@
 				{ "caption": "Aktiviert", "value": 1 },
 				{ "caption": "Intern Aktiviert", "value": 2 },
 				{ "caption": "WARTUNG", "value": 3 },
-				{ "caption": "Vor Scharf", "value": 4 }
+				{ "caption": "Vor Scharf Timer", "value": 4 },
+				{ "caption": "Vor Alarm Timer", "value": 4 }
+
 				]
         }
     }]
