@@ -446,12 +446,8 @@
 		}
 			private function GetOutputSonderziele(int $sonder_id){
 			$arrString = $this->ReadPropertyString("sonderziele");
-			if ($arrString){
-				$arr = json_decode($arrString, true);
-			return $arr;
-		}
-			return null;
-				if (!$arr){ return; }
+			$arr = json_decode($arrString, true);
+			if (!$arr){ return;}
 					foreach($arr as $key1) {
 					if ($key1["typ"] == $sonder_id){
 						echo IPS_RunScriptWaitEx($key1["InstanceID"], Array("TYP" => $$sonder_id));
