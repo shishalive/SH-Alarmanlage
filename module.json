@@ -1,0 +1,13 @@
+{
+    "id": "{554D83BE-7A43-4350-6372-EFA73B9F0A9B}",
+    "name": "Alarmanlage",
+    "type": 3,
+    "vendor": "SH-Smarthome.de",
+  "aliases": [
+    "Alarmanlage"
+  ],  
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "SXALERT"
+}
