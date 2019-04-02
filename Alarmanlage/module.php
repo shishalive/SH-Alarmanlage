@@ -206,8 +206,7 @@
 					//Wartung
 					SetValueInteger($this->GetIDForIdent("alarmmodus"), $Modus);
 					SetValueString($this->GetIDForIdent("TTS_output"), "Alarmanlage ist im Wartungsmodus.");
-					$this->GetOutputSonderziele(3);
-
+					$this->GetOutputSonderziele(1);
 					break;
 					
 				default:
@@ -450,7 +449,7 @@
 			if (!$arr){ return;}
 					foreach($arr as $key1) {
 					if ($key1["typ"] == $sonder_id){
-						echo IPS_RunScriptWaitEx($key1["InstanceID"], Array("TYP" => $$sonder_id));
+						echo IPS_RunScriptWaitEx($key1["InstanceID"], Array("TYP" => $sonder_id));
 				}
 			}
 		}
