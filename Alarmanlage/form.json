@@ -92,10 +92,10 @@
         "name": "InstanceID", 
         "width": "auto",
         "add": 0,
-        "edit": {
+        "edit": {[
             "type": "SelectVariable",
 			"type": "SelectScript"
-        }
+        ]}
     }, {
         "caption": "24h-Alarm",
         "name": "24h",
@@ -178,7 +178,8 @@
 				{ "caption": "Deaktiviert", "value": 0 },
 				{ "caption": "Aktiviert", "value": 1 },
 				{ "caption": "Intern Aktiviert", "value": 2 },
-				{ "caption": "WARTUNG", "value": 3 }
+				{ "caption": "WARTUNG", "value": 3 },
+				{ "caption": "Vor Scharf", "value": 4 }
 				]
         }
     }]
