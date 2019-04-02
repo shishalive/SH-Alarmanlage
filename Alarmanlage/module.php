@@ -52,7 +52,7 @@
 			//Eigenschaften registrieren
 			$this->RegisterPropertyString("devices", null);
 			$this->RegisterPropertyString("melder", null);
-			$this->RegisterPropertyString("sonderziele", null);
+			$this->RegisterPropertyString("Sonderziele", null);
 
 			
 			$this->RegisterPropertyInteger("dauer_alarmbeleuchtung", 900);
@@ -444,7 +444,7 @@
 			return null;
 		}
 			private function GetOutputSonderziele(int $sonder_id){
-			$arrString = $this->ReadPropertyString("sonderziele");
+			$arrString = $this->ReadPropertyString("Sonderziele");
 			if ($arrString){
 			$arr = json_decode($arrString, true);
 			if (!$arr){ return;}
