@@ -154,7 +154,7 @@
     }]
 },{
     "type": "List",
-    "name": "sonderziele",
+    "name": "Sonderziele",
     "caption": "Sonderziele",
     "rowCount": 5,
     "add": true,
