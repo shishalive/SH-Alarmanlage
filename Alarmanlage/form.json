@@ -34,7 +34,7 @@
     }, {
         "caption": "Technik-Alarm",
         "name": "Technik",
-        "width": "150px",
+        "width": "100px",
         "add": false,
         "edit": {
             "type": "CheckBox"
@@ -66,7 +66,7 @@
     }, {
         "caption": "Intern aktiv",
         "name": "istInternAktiv",
-        "width": "150px",
+        "width": "100px",
         "add": true,
         "edit": {
             "type": "CheckBox"
