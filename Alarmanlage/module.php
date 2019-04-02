@@ -542,6 +542,7 @@
             } else {
 				SetValue($outputID, $actionValue);
 			}
+			SetValue($outputID, $actionValue);
         }
 
         private function GetProfileName($variable){
