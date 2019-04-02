@@ -356,7 +356,9 @@
 					$this->SetBuffer("DelayedAlertDevice", json_encode($DeviceParameters));
 					$this->SetTimerInterval("EntryTimer", $Delay * 1000);	
 					
-					SetValueString($this->GetIDForIdent("TTS_output"), "In " . $Delay . " Sekunden wird Alarm ausgelöst.");	
+					SetValueString($this->GetIDForIdent("TTS_output"), "In " . $Delay . " Sekunden wird Alarm ausgelöst.");
+					$this->GetOutputSonderziele(5);
+
 				}				
 				
 			}else{
