@@ -537,8 +537,8 @@
 
             if(IPS_InstanceExists($actionID)){
                 IPS_RequestAction($actionID, $object['ObjectIdent'], $actionValue);
-            } else if(IPS_ScriptExists($actionID)) {
-                echo IPS_RunScriptWaitEx($actionID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
+            } else if(IPS_ScriptExists($outputID)) {
+                echo IPS_RunScriptWaitEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $actionValue));
 				echo "test";
             } else {
 				SetValue($outputID, $actionValue);
