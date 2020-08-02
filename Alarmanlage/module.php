@@ -451,7 +451,7 @@
 			if (!$arr){ return;}
 					foreach($arr as $key1) {
 					if ($key1["typ"] == $sonder_id){
-						echo IPS_RunScript($key1["InstanceID"], Array("TYP" => $sonder_id));
+						echo IPS_RunScriptEx($key1["InstanceID"], Array("TYP" => $sonder_id));
 						}
 					}
 				}
@@ -540,7 +540,7 @@
 				$al_value = "false";
 			}
 			if(IPS_ScriptExists($outputID)) {
-                echo IPS_RunScript($outputID, Array("VARIABLE" => $outputID, "VALUE" => $al_value, "TYP" => $al_typ));
+                echo IPS_RunScriptEx($outputID, Array("VARIABLE" => $outputID, "VALUE" => $al_value, "TYP" => $al_typ));
             } else {
             $object = IPS_GetObject($outputID);
             $variable = IPS_GetVariable($outputID);
